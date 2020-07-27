@@ -1,6 +1,6 @@
 function narcissistic(value) {
   const digits = value.toString().split('').map(Number);
-  const sum = digits.reduce((accumulator, current) => accumulator + Math.pow(current, digits.length), 0)
+  const sum = digits.reduce((accumulator, current) => accumulator + current ** digits.length, 0)
 
   return value === sum
 }
